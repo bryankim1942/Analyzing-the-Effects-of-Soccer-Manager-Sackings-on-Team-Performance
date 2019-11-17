@@ -49,19 +49,12 @@ stats.shapiro(diff)
 
 
 
-Since the p-value above of `1.137985712607037e-11` is less than $0.05$, we reject the null hypothesis and can conclude that the differences are NOT from a normal distribution. Hence, we must use the Wilcoxon Test instead of the paired t-test.
+Since the p-value above of `1.137985712607037e-11` is less than `0.05`, we reject the null hypothesis and can conclude that the differences are NOT from a normal distribution. Hence, we must use the Wilcoxon Test instead of the paired t-test.
 
 Using the resulting data sets I conducted a Wilcoxon test on the results before and after with: 
-$ (H_{0}: M_{diff} = 0) $ and
-$ (H_{1}: M_{diff} \neq 0) $
-Where $ M_{diff} $ is the median of the differences between the results before and after.
-
-\begin{equation}
-H_{0}: M_{diff} = 0
-\end{equation}
-\begin{equation}
-H_{1}: M_{diff} \neq 0
-\end{equation}
+![equation](https://latex.codecogs.com/gif.latex?H_%7B0%7D%3A%20M_%7Bdiff%7D%20%3D%200)
+![equation](https://latex.codecogs.com/gif.latex?H_%7B1%7D%3A%20M_%7Bdiff%7D%20%5Cneq%200)
+Where the null hypothesis states that the median of the differences between the results before and after is 0.
 
 
 ```python
@@ -75,7 +68,7 @@ scipy.stats.wilcoxon(np.array(pd.melt(before)['value']),np.array(pd.melt(after)[
 
 
 
-The output above is the wilcoxon test on before and after data sets which consist of $\textit{all}$ games, regardless of team or manager. Since the p-value shown of `2.1057694023886934e-07` is less than the common threshold of $\alpha = 0.05$, we can conclude that we have statistically significant evidence to reject the null hypothesis, and thus to accept that the results of games after managerial changes are better (more points).
+The output above is the wilcoxon test on before and after data sets which consist of **all** games, regardless of team or manager. Since the p-value shown of `2.1057694023886934e-07` is less than the common threshold of `0.05`, we can conclude that we have statistically significant evidence to reject the null hypothesis, and thus to accept that the results of games after managerial changes are better (more points).
 
 
 ```python
@@ -89,7 +82,7 @@ scipy.stats.wilcoxon(pd.array(before.mean()),pd.array(after.mean()))
 
 
 
-The output above is the wilcoxon test on before and after data sets which consist of the average points earned in 5 games before and after a managerial change. Since the p-value shown of `6.084365033589189e-07` is less than the common threshold of $\alpha = 0.05$, we can again conclude that we have statistically significant evidence to reject the null hypothesis, and thus to accept that the average result of games after managerial changes are better (more points).
+The output above is the wilcoxon test on before and after data sets which consist of the average points earned in 5 games before and after a managerial change. Since the p-value shown of `6.084365033589189e-07` is less than the common threshold of `0.05`, we can again conclude that we have statistically significant evidence to reject the null hypothesis, and thus to accept that the average result of games after managerial changes are better (more points).
 
 ### Conclusion
 
