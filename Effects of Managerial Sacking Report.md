@@ -51,10 +51,14 @@ stats.shapiro(diff)
 
 Since the p-value above of `1.137985712607037e-11` is less than `0.05`, we reject the null hypothesis and can conclude that the differences are NOT from a normal distribution. Hence, we must use the Wilcoxon Test instead of the paired t-test.
 
-Using the resulting data sets I conducted a Wilcoxon test on the results before and after with: 
-![equation](https://latex.codecogs.com/gif.latex?H_%7B0%7D%3A%20M_%7Bdiff%7D%20%3D%200)
+Using the resulting data sets I conducted a Wilcoxon test on the results before and after with:
+
+![equation](https://latex.codecogs.com/gif.latex?H_%7B0%7D%3A%20M_%7Bdiff%7D%20%3D%200) and 
 ![equation](https://latex.codecogs.com/gif.latex?H_%7B1%7D%3A%20M_%7Bdiff%7D%20%5Cneq%200)
-Where the null hypothesis states that the median of the differences between the results before and after is 0.
+
+Where 
+![equation](https://latex.codecogs.com/gif.latex?M_%7Bdiff%7D)
+is the median of the differences between the results before and after.
 
 
 ```python
