@@ -22,10 +22,10 @@ To do this, I downloaded data from "https://datahub.io/sports-data/english-premi
 
 ### Plots and Analysis
 
-<img src="Images/PPG_ba.png" align="left">
-<img src="Images/Cumavg_PPG.png" align="right">
-<img src="Images/Boxplot_PPG.png" align="left">
-<img src="Images/Densities_PPG.png" align="right">
+<img src="Images/PPG_ba.png">
+<img src="Images/Cumavg_PPG.png">
+<img src="Images/Boxplot_PPG.png">
+<img src="Images/Densities_PPG.png">
 
 The plots above show that there is indeed a difference in team performance before and after a managerial change. However, to further prove that there is in fact an effect of managerial changes on teams' performance, we will use statistical analysis.
 
